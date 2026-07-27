@@ -802,3 +802,88 @@ section:hover{
     rgba(255,255,255,.75));
 
 }
+/* Mobile Devices */
+
+@media (max-width:768px){
+
+    body{
+        padding:15px;
+    }
+
+
+    nav{
+    width:100%;
+}
+
+nav ul{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
+}
+
+    nav ul{
+        flex-direction:column;
+        align-items:center;
+        gap:15px;
+    }
+header{
+    position:relative;
+    top:0;
+    border-radius:25px;
+    padding:20px;
+}
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .skills{
+        grid-template-columns:1fr;
+    }
+
+    .projects{
+        grid-template-columns:1fr;
+    }
+
+    img{
+        width:100%;
+        height:auto;
+    }
+
+    h1{
+        font-size:2rem;
+    }
+
+    h2{
+        font-size:1.5rem;
+    }
+
+}
+/* Tablet */
+
+@media (min-width:769px) and (max-width:1024px){
+
+    .skills{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .projects{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+
+}
+/* Desktop */
+
+@media (min-width:1025px){
+
+    .skills{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .projects{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
