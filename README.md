@@ -7,17 +7,17 @@ This project documents my daily learning journey in HTML, CSS, JavaScript, and m
 ---
 
 ## 📚 Internship Progress
-
-| Day   | Topic               | Documentation          |
-| ----- | ------------------- | ---------------------- |
-| Day 1 | HTML Basics         | [View](Docs/Day-01.md) |
-| Day 2 | Semantic HTML       | [View](Docs/Day-02.md) |
-| Day 3 | Portfolio Structure | [View](Docs/Day-03.md) |
-| Day 4 | CSS Styling         | [View](Docs/Day-04.md) |
-| Day 5 | Flexbox & CSS Grid  | [View](Docs/Day-05.md) |
-| Day 6 | Responsive Design   | [View](Docs/Day-06.md) |
-| Day 7 | JavaScript Basics   | [View](Docs/Day-07.md) |
-
+| Day   | Topic                                   | Documentation          |
+| ----- | --------------------------------------- | ---------------------- |
+| Day 1 | HTML Basics                             | [View](Docs/Day-01.md) |
+| Day 2 | Semantic HTML                           | [View](Docs/Day-02.md) |
+| Day 3 | Portfolio Structure                     | [View](Docs/Day-03.md) |
+| Day 4 | CSS Styling                             | [View](Docs/Day-04.md) |
+| Day 5 | Flexbox & CSS Grid                      | [View](Docs/Day-05.md) |
+| Day 6 | Responsive Design                       | [View](Docs/Day-06.md) |
+| Day 7 | JavaScript Basics                       | [View](Docs/Day-07.md) |
+| Day 8 | Interactive Portfolio & Project Cards   | [View](Docs/Day-08.md) |
+| Day 9 | Skills, Resume & Experience Sections    | [View](Docs/Day-09.md) |
 ---
 
 ## 💻 Technologies
