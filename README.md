@@ -18,6 +18,7 @@ This project documents my daily learning journey in HTML, CSS, JavaScript, and m
 | Day 7 | JavaScript Basics                       | [View](Docs/Day-07.md) |
 | Day 8 | Interactive Portfolio & Project Cards   | [View](Docs/Day-08.md) |
 | Day 9 | Skills, Resume & Experience Sections    | [View](Docs/Day-09.md) |
+| Day 10 | Contact form and JavaScript            | [View}(Docs/Day-10.md) |
 ---
 
 ## 💻 Technologies
