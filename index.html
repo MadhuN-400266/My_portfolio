@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Madhavi Nadindla | Portfolio</title>
-
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -320,69 +321,23 @@ Building responsive web applications using HTML, CSS and JavaScript while learni
         </section>
 
         <!-- Contact -->
+            <section id="contact">
+    <h2>Contact Me</h2>
 
-        <section id="contact">
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required>
 
-            <h2>Contact Me</h2>
+        <input type="email" id="email" placeholder="Your Email" required>>
 
-            <form>
+        <input type="text" id="subject" placeholder="Subject" required>>
 
-                <p>
+        <textarea id="message" placeholder="Your Message" required></textarea>
 
-                    <label for="name">
-                        Full Name
-                    </label>
+        <button type="submit">Send Message</button>
 
-                    <br>
-
-                    <input
-                        type="text"
-                        id="name"
-                        placeholder="Enter your name"
-                        required>
-
-                </p>
-
-                <p>
-
-                    <label for="email">
-                        Email
-                    </label>
-
-                    <br>
-
-                    <input
-                        type="email"
-                        id="email"
-                        placeholder="Enter your email"
-                        required>
-
-                </p>
-
-                <p>
-
-                    <label for="message">
-                        Message
-                    </label>
-
-                    <br>
-
-                    <textarea
-                        id="message"
-                        rows="5"
-                        placeholder="Write your message"></textarea>
-
-                </p>
-
-                <button type="submit">
-
-                    Send Message
-
-                </button>
-
-            </form>
-
-        </section>
+        <p id="formMessage"></p>
+    </form>
+</section>
 
     </main>
 
@@ -407,7 +362,7 @@ Building responsive web applications using HTML, CSS and JavaScript while learni
 
                 <li>
 
-                    <a href="https://github.com/MadhuN-400266/My_portfolio" target="_blank"></a>
+                    <a href="https://github.com/MadhuN-400266/My_portfolio" target="_blank">
 
                         GitHub
 

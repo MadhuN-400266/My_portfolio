@@ -131,3 +131,39 @@ const year = document.getElementById("year");
 if (year) {
     year.textContent = new Date().getFullYear();
 }
+const form = document.getElementById("contactForm");
+const message = document.getElementById("formMessage");
+
+form.addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const subject = document.getElementById("subject").value.trim();
+    const text = document.getElementById("message").value.trim();
+
+    if(name === "" || email === "" || subject === "" || text === ""){
+
+        message.style.color = "red";
+        message.textContent = "Please fill all the fields.";
+
+        return;
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if(!emailPattern.test(email)){
+
+        message.style.color = "red";
+        message.textContent = "Please enter a valid email.";
+
+        return;
+    }
+
+    message.style.color = "green";
+    message.textContent = "Message sent successfully!";
+
+    form.reset();
+
+});
