@@ -992,3 +992,104 @@ header{
     border-radius:12px;
     box-shadow:0 5px 15px rgba(0,0,0,.1);
 }
+html {
+    scroll-behavior: smooth;
+}
+section {
+    transition: transform 0.4s ease,
+                box-shadow 0.4s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+button,
+.btn {
+    transition: all 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.15);
+}
+nav a{
+    position: relative;
+    transition: color .3s;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0;
+    height:2px;
+    background:#6c63ff;
+    transition:.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+.project-card{
+    transition:.4s;
+}
+
+.project-card:hover{
+    transform:translateY(-10px) scale(1.03);
+}
+.skill{
+    transition:.3s;
+}
+
+.skill:hover{
+    transform:scale(1.08);
+}
+.profile-image{
+    transition:.5s;
+}
+
+.profile-image:hover{
+    transform:rotate(3deg) scale(1.05);
+}
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+section{
+    animation:fadeUp .8s ease;
+}
+@keyframes float{
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-20px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+
+.blob{
+    animation:float 6s ease-in-out infinite;
+}
+#scrollTop{
+    transition:.3s;
+}
+
+#scrollTop:hover{
+    transform:scale(1.2);
+}
