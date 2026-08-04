@@ -1,81 +1,99 @@
-// ================================
-// Day 7 - JavaScript Portfolio
-// ================================
+// ==========================================
+// Portfolio JavaScript
+// Clean & Optimized Version
+// ==========================================
 
-// Welcome message
-console.log("Welcome to My Portfolio!");
+console.log("🚀 Welcome to My Portfolio!");
 
-// ------------------------------
-// Say Hello Button
-// ------------------------------
+/* ==========================================
+   DOM ELEMENTS
+========================================== */
 
 const helloBtn = document.getElementById("helloBtn");
+const changeTextBtn = document.getElementById("changeText");
+const colorBtn = document.getElementById("colorBtn");
+const topBtn = document.getElementById("topBtn");
+
+const welcomeText = document.getElementById("welcomeText");
+
+const form = document.getElementById("contactForm");
+const formMessage = document.getElementById("formMessage");
+
+const year = document.getElementById("year");
+
+const navLinks = document.querySelectorAll("nav a");
+
+
+/* ==========================================
+   HELPER FUNCTION
+========================================== */
+
+const showMessage = (text, color) => {
+    if (!formMessage) return;
+
+    formMessage.textContent = text;
+    formMessage.style.color = color;
+};
+
+
+/* ==========================================
+   HELLO BUTTON
+========================================== */
 
 if (helloBtn) {
-    helloBtn.addEventListener("click", function () {
+    helloBtn.addEventListener("click", () => {
         alert("👋 Hello! Thank you for visiting my portfolio.");
     });
 }
 
-// ------------------------------
-// Change Heading Text
-// ------------------------------
 
-const changeTextBtn = document.getElementById("changeText");
-const welcomeText = document.getElementById("welcomeText");
+/* ==========================================
+   CHANGE HERO TEXT
+========================================== */
 
 if (changeTextBtn && welcomeText) {
-    changeTextBtn.addEventListener("click", function () {
-        welcomeText.textContent = "✨ Thanks for exploring my portfolio!";
+    changeTextBtn.addEventListener("click", () => {
+        welcomeText.textContent =
+            "✨ Thanks for exploring my portfolio!";
     });
 }
 
-// ------------------------------
-// Change Background Color
-// ------------------------------
 
-const colorBtn = document.getElementById("colorBtn");
+/* ==========================================
+   BACKGROUND TOGGLE
+========================================== */
+
+let backgroundChanged = false;
 
 if (colorBtn) {
 
-    let changed = false;
+    colorBtn.addEventListener("click", () => {
 
-    colorBtn.addEventListener("click", function () {
+        backgroundChanged = !backgroundChanged;
 
-        if (!changed) {
-            document.body.style.background =
-                "linear-gradient(135deg,#dbeafe,#f3e8ff)";
-        } else {
-            document.body.style.background = "";
-        }
+        document.body.style.background = backgroundChanged
+            ? "linear-gradient(135deg,#dbeafe,#f3e8ff)"
+            : "";
 
-        changed = !changed;
     });
+
 }
 
-// ------------------------------
-// Scroll To Top Button
-// ------------------------------
 
-const topBtn = document.getElementById("topBtn");
-
-window.addEventListener("scroll", function () {
-
-    if (topBtn) {
-
-        if (window.scrollY > 200) {
-            topBtn.style.display = "block";
-        } else {
-            topBtn.style.display = "none";
-        }
-
-    }
-
-});
+/* ==========================================
+   SCROLL TO TOP BUTTON
+========================================== */
 
 if (topBtn) {
 
-    topBtn.addEventListener("click", function () {
+    window.addEventListener("scroll", () => {
+
+        topBtn.style.display =
+            window.scrollY > 200 ? "block" : "none";
+
+    });
+
+    topBtn.addEventListener("click", () => {
 
         window.scrollTo({
             top: 0,
@@ -86,84 +104,82 @@ if (topBtn) {
 
 }
 
-// ------------------------------
-// Smooth Navigation Scroll
-// ------------------------------
 
-const navLinks = document.querySelectorAll('nav a');
+/* ==========================================
+   SMOOTH NAVIGATION
+========================================== */
 
-navLinks.forEach(function (link) {
+navLinks.forEach(link => {
 
-    link.addEventListener("click", function (e) {
+    link.addEventListener("click", e => {
 
-        const target = document.querySelector(this.getAttribute("href"));
+        const target = document.querySelector(
+            link.getAttribute("href")
+        );
 
-        if (target) {
+        if (!target) return;
 
-            e.preventDefault();
+        e.preventDefault();
 
-            target.scrollIntoView({
-                behavior: "smooth"
-            });
-
-        }
+        target.scrollIntoView({
+            behavior: "smooth"
+        });
 
     });
 
 });
 
-// ------------------------------
-// Page Loaded Message
-// ------------------------------
 
-window.addEventListener("load", function () {
+/* ==========================================
+   CONTACT FORM VALIDATION
+========================================== */
 
-    console.log("Portfolio Loaded Successfully!");
+if (form) {
 
-});
+    form.addEventListener("submit", e => {
 
-// ------------------------------
-// Footer Year (Optional)
-// ------------------------------
+        e.preventDefault();
 
-const year = document.getElementById("year");
+        const name = document.getElementById("name")?.value.trim();
+        const email = document.getElementById("email")?.value.trim();
+        const subject = document.getElementById("subject")?.value.trim();
+        const message = document.getElementById("message")?.value.trim();
+
+        if (!name || !email || !subject || !message) {
+            showMessage("Please fill in all the fields.", "red");
+            return;
+        }
+
+        const emailPattern =
+            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(email)) {
+            showMessage("Please enter a valid email.", "red");
+            return;
+        }
+
+        showMessage("✅ Message sent successfully!", "green");
+
+        form.reset();
+
+    });
+
+}
+
+
+/* ==========================================
+   FOOTER YEAR
+========================================== */
 
 if (year) {
     year.textContent = new Date().getFullYear();
 }
-const form = document.getElementById("contactForm");
-const message = document.getElementById("formMessage");
 
-form.addEventListener("submit", function(e) {
 
-    e.preventDefault();
+/* ==========================================
+   PAGE LOAD
+========================================== */
 
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const subject = document.getElementById("subject").value.trim();
-    const text = document.getElementById("message").value.trim();
-
-    if(name === "" || email === "" || subject === "" || text === ""){
-
-        message.style.color = "red";
-        message.textContent = "Please fill all the fields.";
-
-        return;
-    }
-
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if(!emailPattern.test(email)){
-
-        message.style.color = "red";
-        message.textContent = "Please enter a valid email.";
-
-        return;
-    }
-
-    message.style.color = "green";
-    message.textContent = "Message sent successfully!";
-
-    form.reset();
-
+window.addEventListener("load", () => {
+    console.log("✅ Portfolio Loaded Successfully!");
 });
