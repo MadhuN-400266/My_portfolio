@@ -19,6 +19,9 @@ This project documents my daily learning journey in HTML, CSS, JavaScript, and m
 | Day 8 | Interactive Portfolio & Project Cards   | [View](Docs/Day-08.md) |
 | Day 9 | Skills, Resume & Experience Sections    | [View](Docs/Day-09.md) |
 | Day 10 | Contact form and JavaScript            | [View](Docs/Day-10.md) |
+| Day 11 | CSS animations and interactive UI effects    | [View](Docs/Day-11.md) |
+| Day 12 | GitHub Pages deployment and portfolio hosting| [View](Docs/Day-12.md) |
+| Day 13 | CSS optimization, bug fixes, and code cleanup| [View](Docs/Day-13.md) |
 ---
 
 ## 💻 Technologies
